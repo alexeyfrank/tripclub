@@ -1,18 +1,14 @@
 # == Schema Information
 #
-# Table name: pages
+# Table name: menus
 #
 #  id         :integer          not null, primary key
 #  title      :string(255)
-#  content    :text
-#  ancestry   :string(255)
+#  slug       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class Page < ActiveRecord::Base
-  has_ancestry
-
-
-  include PageRepository
+class Menu < ActiveRecord::Base
+  has_many :items
 end

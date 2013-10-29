@@ -1,5 +1,6 @@
 ru:
   attributes:
+    title: Название
     state_event: Изменить состояние
     state: Состояние
     created_at: Время создания
@@ -10,13 +11,20 @@ ru:
     models:
       user: Пользователь
       page: Страница
+      menu: Меню
+      item: элемент меню
+      menu/item: элемент меню
 
     attributes:
       user:
         email: E-mail
       page:
-        title: Название
         content: Содержимое
         parent: Родительская страница
         parent_id: Родительская страница
+      menu/item:
+        url: Ссылка
+        position: Позиция в меню
+        parent: Родительский элемент меню
+        parent_id: Родительский элемент меню
 

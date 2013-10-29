@@ -1,4 +1,5 @@
 ActiveAdmin.register User do
+  menu label: proc { I18n.t 'admin.menu.users' }
   index do
     column :email
     column :current_sign_in_at

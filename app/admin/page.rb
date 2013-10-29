@@ -1,4 +1,5 @@
 ActiveAdmin.register Page do
+  menu label: proc { I18n.t 'admin.menu.pages' }
   index do
     column :title
     column :created_at

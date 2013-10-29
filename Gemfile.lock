@@ -85,6 +85,8 @@ GEM
     ancestry (2.0.0)
       activerecord (>= 3.0.0)
     angularjs-rails (1.0.8)
+    annotate (2.5.0)
+      rake
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (4.0.1)
@@ -458,6 +460,7 @@ DEPENDENCIES
   activeadmin!
   ancestry
   angularjs-rails
+  annotate
   authority
   backup
   bcrypt-ruby (~> 3.0.0)

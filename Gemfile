@@ -60,6 +60,7 @@ gem 'angularjs-rails'
 gem 'rollbar'
 gem 'ancestry'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'annotate'
 # gem 'capybara-console'
 
 group :test do
