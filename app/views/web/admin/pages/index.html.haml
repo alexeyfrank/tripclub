@@ -1,0 +1,12 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= ham(:page, :name)
+      %th= ham(:page, :state)
+      %th= ham(:page, :created_at)
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= link_to item, edit_admin_page_path(item)
+        %td= l page.created_at
+
