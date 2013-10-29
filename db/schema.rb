@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029075757) do
+ActiveRecord::Schema.define(version: 20131029182205) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20131029075757) do
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
