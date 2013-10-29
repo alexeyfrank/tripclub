@@ -4,6 +4,8 @@ Tripclub::Application.routes.draw do
   scope module: :web do
     root to: "welcome#index"
 
+    resources :posts, only: [:index, :show]
+
     # namespace :admin do
     #   # root to: "welcome#index"
 

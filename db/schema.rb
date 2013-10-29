@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029182205) do
+ActiveRecord::Schema.define(version: 20131029195014) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 20131029182205) do
   end
 
   add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "introtext"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
