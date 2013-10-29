@@ -16,4 +16,8 @@ class Menu::Item < ActiveRecord::Base
   has_ancestry
 
   belongs_to :menu
+
+  def to_s
+    title
+  end
 end

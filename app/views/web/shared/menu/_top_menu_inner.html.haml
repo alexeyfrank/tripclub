@@ -1,0 +1,7 @@
+%ul.sub-menu
+  - items.each do |item|
+    %li
+      = link_to item, item.url
+      - if item.has_children?
+        = render 'web/shared/menu/top_menu_inner', items: item.children
+
