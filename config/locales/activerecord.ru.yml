@@ -1,0 +1,22 @@
+ru:
+  attributes:
+    state_event: Изменить состояние
+    state: Состояние
+    created_at: Время создания
+    published_at: Опубликовано
+    user: Пользователь
+
+  activerecord:
+    models:
+      user: Пользователь
+      page: Страница
+
+    attributes:
+      user:
+        email: E-mail
+      page:
+        title: Название
+        content: Содержимое
+        parent: Родительская страница
+        parent_id: Родительская страница
+

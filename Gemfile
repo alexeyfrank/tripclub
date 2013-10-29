@@ -59,6 +59,7 @@ gem 'minitest-rails'
 gem 'angularjs-rails'
 gem 'rollbar'
 gem 'ancestry'
+gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'capybara-console'
 
 group :test do

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  include Concerns::AuthManagment
-  include Concerns::AclManagment
+  # include Concerns::AuthManagment
+  # include Concerns::AclManagment
   include Concerns::LocaleManagment
   include Concerns::FlashHelper
 
