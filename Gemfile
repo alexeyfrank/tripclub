@@ -61,6 +61,7 @@ gem 'rollbar'
 gem 'ancestry'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'annotate'
+gem 'rich', :git => 'git://github.com/bastiaanterhorst/rich.git'
 # gem 'capybara-console'
 
 group :test do

@@ -13,7 +13,7 @@ ActiveAdmin.register Post do
     f.inputs "Page Details" do
       f.input :title
       f.input :introtext
-      f.input :content
+      f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
     end
     f.actions
   end

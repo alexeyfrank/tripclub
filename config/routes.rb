@@ -1,4 +1,5 @@
 Tripclub::Application.routes.draw do
+  mount Rich::Engine => '/rich', :as => 'rich'
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   scope module: :web do
