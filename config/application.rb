@@ -13,6 +13,7 @@ module Tripclub
     # -- all .rb files in that directory are automatically loaded.
 
     config.autoload_paths += Dir[
+      "#{config.root}/app/widgets/**/*.rb",
       "#{config.root}/lib/**/"
       # "#{config.root}/test/support/pages/**/",
       # "#{config.root}/test/support/sections/**/"

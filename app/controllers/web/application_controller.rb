@@ -1,4 +1,8 @@
 class Web::ApplicationController < ApplicationController
+  include RecentPostWidget
+
+  helper_method :recent_posts
+
   protect_from_forgery with: :exception
 
   helper_method :title

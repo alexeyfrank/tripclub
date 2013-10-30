@@ -6,20 +6,10 @@
         %p Cras euismod, sapien ut accumsan feugiat, mauris erat auctor metus, sed pellentesque massa tellus non enim. Aliquam commodo, risus sed posuere eleifend, odio nisi rhoncus nisl, vitae pharetra sem arcu non dui.
 
       #recent-posts-3.footer-widget.widget_recent_entries
-        %h4.widgettitle Recent Posts
+        %h4.widgettitle Последние посты
         %ul
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/make-a-wish/"} Make A Wish
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/the-morning-dew/"} The Morning Dew
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/purple-haze/"} Purple Haze
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/bridge-to-nowhere/"} Bridge To Nowhere
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/the-lonely-ladybug/"} The Lonely Ladybug
-          %li
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/moneys-take-a-bath/"} Monkeys Take a Bath
+          - recent_posts.each do |post|
+            %li= link_to post, post_path(post)
 
       #recent-comments-4.footer-widget.widget_recent_comments
         %h4.widgettitle Recent Comments
