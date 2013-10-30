@@ -10,3 +10,9 @@
  *
  *= require_self
  */
+
+
+.post .post-thumbnail img.post-thumb {
+  width: 186px;
+  height: 186px;
+}

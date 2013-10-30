@@ -6,11 +6,9 @@
       = post.created_at
       в
       = link_to 'Блог', posts_path
-      |
-      %a{href: "http://www.elegantthemes.com/preview/Chameleon/2008/09/04/hello-world-2/#comments", title: "Comment on Neque porro quisquam est qui"} 9 comments
     .post-thumbnail
       = link_to post_path(post) do
-        %img{alt: "Neque porro quisquam est qui", height: "184", src: "http://cdn.elegantthemes.com/preview/Chameleon/wp-content/uploads/et_temp/feature-4-47041_184x184.jpg", width: "184"}/
+        %img{alt: post.title, height: "184", src: post.preview_url, width: "184"}/
         %span.overlay
 
     %p= post.introtext

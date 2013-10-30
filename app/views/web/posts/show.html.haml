@@ -1,2 +1,6 @@
-%h1 Web::Posts#show
-%p Find me in app/views/web/posts/show.html.haml
+.entry.post.clearfix
+  .post-thumbnail
+    %img.post-thumb{alt: @post.title, height: "186", src: @post.preview_url, width: "186"}/
+    %span.post-overlay
+  %p= @post.content.html_safe
+

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Web::PostsController < Web::ApplicationController
   layout 'web/blog'
 
@@ -7,5 +8,13 @@ class Web::PostsController < Web::ApplicationController
 
   def show
     @post = Post.find params[:id]
+  end
+
+  def title
+    if @post
+      @post.title
+    else
+      'Блог'
+    end
   end
 end
