@@ -14,6 +14,13 @@
 class Page < ActiveRecord::Base
   has_ancestry
 
-
   include PageRepository
+
+  def to_s
+    title
+  end
+
+  def to_param
+    slug
+  end
 end

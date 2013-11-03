@@ -20,10 +20,7 @@
 
     <%= render 'layouts/shared/web/page_header' %>
 
-    <div id="content" class="clearfix">
-      <%= render 'layouts/shared/web/blog/content' %>
-      <%= render 'layouts/shared/web/blog/sidebar' %>
-    </div>
+    <%= yield %>
 
     <%= render 'layouts/shared/web/footer' %>
   </div> <!-- end #container -->

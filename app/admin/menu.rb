@@ -1,5 +1,5 @@
 ActiveAdmin.register Menu do
-  menu label: I18n.t('admin.menu.menus')
+  menu label: proc { I18n.t('admin.menu.menus') }
 
   index do
     column :title

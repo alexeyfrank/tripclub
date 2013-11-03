@@ -62,6 +62,7 @@ gem 'ancestry'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'annotate'
 gem 'rich', :git => 'git://github.com/bastiaanterhorst/rich.git'
+gem "activeadmin-settings", github: 'alexeyfrank/activeadmin-settings'
 # gem 'capybara-console'
 
 group :test do

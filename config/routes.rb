@@ -6,13 +6,13 @@ Tripclub::Application.routes.draw do
     root to: "welcome#index"
 
     resources :posts, only: [:index, :show]
+    resources :pages, only: [:show]
 
-    # namespace :admin do
-    #   # root to: "welcome#index"
-
-    #   resources :pages
-    # end
+    namespace :admin do
+      resources :settings,    :only => [:update]
+    end
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
