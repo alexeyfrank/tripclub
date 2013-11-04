@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/alexeyfrank/activeadmin-settings.git
-  revision: 9146b46824f63c4a7274cce20e47acd9b5df7011
+  revision: b6966e4f419334e7b3be3f05be8dbf194e6e8e3d
   specs:
     activeadmin-settings (0.4.4)
       activeadmin (>= 0.6.0)
