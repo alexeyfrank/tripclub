@@ -6,6 +6,7 @@ Tripclub::Application.routes.draw do
     root to: "welcome#index"
 
     resources :posts, only: [:index, :show]
+    resources :houses, only: [:index, :show]
     resources :pages, only: [:show]
     resources :events, only: [:index, :show]
 

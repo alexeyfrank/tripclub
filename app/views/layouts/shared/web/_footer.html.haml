@@ -11,25 +11,11 @@
           - recent_posts.each do |post|
             %li= link_to post, post_path(post)
 
-      #recent-comments-4.footer-widget.widget_recent_comments
-        %h4.widgettitle Recent Comments
-        %ul#recentcomments
-          %li.recentcomments
-            %a.url{href: "http://www.elegantthemes.com/blog/theme-additions/new-theme-deepfocus", rel: "external nofollow"} New Theme: DeepFocus- Elegant Themes Blog
-            on
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2010/09/15/purple-haze/#comment-616"} Purple Haze
-          %li.recentcomments
-            %a.url{href: "http://%/loveworld5", rel: "external nofollow"} Frankie
-            on
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2008/01/18/at-vero-eos-et-accusamus-et-iusto/#comment-25"} At vero eos et accusamus et iusto
-          %li.recentcomments
-            %a.url{href: "http://%/loveworld4", rel: "external nofollow"} Soviet
-            on
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2008/07/17/urna-eget-erat-non-purus/#comment-123"} Urna eget erat non purus
-          %li.recentcomments
-            %a.url{href: "http://%/loveworld3", rel: "external nofollow"} Light
-            on
-            %a{href: "http://www.elegantthemes.com/preview/Chameleon/2008/09/04/hello-world-2/#comment-297"} Neque porro quisquam est qui
+      #recent-posts-3.footer-widget.widget_recent_entries
+        %h4.widgettitle Последние квартиры
+        %ul
+          - recent_houses.each do |house|
+            %li= link_to house, house_path(house)
 
       #text-3.footer-widget.widget_text
         %h4.widgettitle Text Widget

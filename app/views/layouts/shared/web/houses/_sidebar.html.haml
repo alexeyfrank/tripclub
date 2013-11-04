@@ -1,0 +1,6 @@
+#sidebar
+  #recent-posts-4.widget.widget_recent_entries
+    %h3.title Последние квартиры
+    %ul
+      - recent_houses.each do |house|
+        %li= link_to house, house_path(house)

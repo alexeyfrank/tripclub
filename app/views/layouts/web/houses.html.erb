@@ -1,0 +1,33 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 6]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--<![endif]-->
+<%= render 'layouts/shared/web/head' %>
+
+<body class="home blog chrome et_includes_sidebar">
+  <div id="container">
+    <%= render 'layouts/shared/web/header' %>
+
+    <%= render 'layouts/shared/web/page_header' %>
+
+    <div id="content" class="clearfix">
+      <%= render 'layouts/shared/web/houses/content' %>
+      <%= render 'layouts/shared/web/houses/sidebar' %>
+    </div>
+
+    <%= render 'layouts/shared/web/footer' %>
+  </div> <!-- end #container -->
+
+  <%= render 'layouts/shared/web/scripts' %>
+</body>
+</html>
