@@ -1,0 +1,8 @@
+#content-area.clearfix.fullwidth
+  #left-area
+    .entry.post.clearfix
+      %h2.title= @event.title
+      %p.meta-info
+        = l @event.date, format: :default
+      = @event.description.html_safe
+

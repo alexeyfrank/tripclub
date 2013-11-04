@@ -7,9 +7,16 @@ Tripclub::Application.routes.draw do
 
     resources :posts, only: [:index, :show]
     resources :pages, only: [:show]
+    resources :events, only: [:index, :show]
 
     namespace :admin do
       resources :settings,    :only => [:update]
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :events, only: [:index]
     end
   end
 
