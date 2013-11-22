@@ -1,0 +1,12 @@
+.header
+  %h3 Бронирование квартиры
+
+= simple_form_for @booking do |f|
+  .txt
+    = f.input :email
+    = f.input :phone
+    = f.input :from
+    = f.input :to
+    = f.input :content
+
+    = link_to 'Забронировать', house_bookings_path(resource_house), class: 'small-button smallblue btn-submit'

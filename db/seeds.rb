@@ -20,9 +20,8 @@ end
 
 top_menu.items.create! title: 'О нас', url: '/pages/about', position: 20
 top_menu.items.create! title: 'Контакты', url: '/pages/contacts', position: 50
-top_menu.items.create! title: 'Идеи для путешествий', url: '/pages/travel-ideas', position: 100
-top_menu.items.create! title: 'Шоппинг', url: '/pages/shopping', position: 200
-top_menu.items.create! title: 'Аренда квартир', url: '/pages/flats', position: 300
+top_menu.items.create! title: 'Идеи для путешествий', url: '/ideas', position: 100
+top_menu.items.create! title: 'Аренда квартир', url: '/houses', position: 300
 top_menu.items.create! title: 'Календарь событий', url: '/events', position: 400
 top_menu.items.create! title: 'Блог', url: '/blog', position: 500
 

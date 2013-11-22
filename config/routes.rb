@@ -1,4 +1,6 @@
 Tripclub::Application.routes.draw do
+  get "bookings/new"
+  get "bookings/create"
   mount Rich::Engine => '/rich', :as => 'rich'
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -6,7 +8,11 @@ Tripclub::Application.routes.draw do
     root to: "welcome#index"
 
     resources :posts, only: [:index, :show]
-    resources :houses, only: [:index, :show]
+    resources :houses, only: [:index, :show] do
+      scope module: :houses do
+        resources :bookings, only: [:new, :create]
+      end
+    end
     resources :pages, only: [:show]
     resources :events, only: [:index, :show]
 

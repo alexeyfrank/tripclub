@@ -1,2 +1,19 @@
-%h1 Web::Houses#index
-%p Find me in app/views/web/houses/index.html.haml
+- @houses.each do |house|
+  .post.entry.clearfix
+    %h2.title
+      = link_to house, house_path(house)
+    %p.meta-info
+      = house.created_at
+    .post-thumbnail
+      = link_to house_path(house) do
+        %img{alt: house, style: "height: 184px; width: 184px;", src: house.preview_url }/
+        %span.overlay
+
+    %p= house.description.html_safe
+    %a.read-more.show-booking-modal-btn{href: new_house_booking_path(house) }
+      %span Забронировать
+
+
+#house-booking-modal.modal
+
+

@@ -34,4 +34,9 @@ ActiveAdmin.register House do
     end
   end
 
+  sidebar "House Details", only: [:show, :edit] do
+    ul do
+      li link_to(I18n.t('admin.house.house_bookings'), admin_house_bookings_path(resource))
+    end
+  end
 end

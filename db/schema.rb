@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104130809) do
+ActiveRecord::Schema.define(version: 20131116173615) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -40,6 +43,17 @@ ActiveRecord::Schema.define(version: 20131104130809) do
     t.string   "title"
     t.text     "description"
     t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "house_bookings", force: true do |t|
+    t.string   "phone"
+    t.text     "content"
+    t.string   "email"
+    t.date     "from"
+    t.date     "to"
+    t.integer  "house_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

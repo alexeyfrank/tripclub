@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require js-routes
+//= require ./modals
 //= require ./eventCalendar/jquery.eventCalendar
 //= require ./eventCalendar/jquery.timeago
 //= require ./events
+//= require ./houses
