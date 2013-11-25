@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116173615) do
+ActiveRecord::Schema.define(version: 20131124185657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -121,6 +121,23 @@ ActiveRecord::Schema.define(version: 20131116173615) do
     t.integer  "owner_id"
     t.text     "uri_cache"
     t.string   "simplified_type",        default: "file"
+  end
+
+  create_table "travel_categories", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "travel_ideas", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.integer  "travel_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "introtext"
+    t.string   "preview_img"
   end
 
   create_table "users", force: true do |t|

@@ -19,6 +19,15 @@ ru:
     attributes:
       user:
         email: E-mail
+      house:
+        content: Описание
+
+      house/booking:
+        email: E-mail
+        phone: Телефон
+        from: С
+        to: По
+        content: Примечание
       page:
         content: Содержимое
         parent: Родительская страница
@@ -30,4 +39,3 @@ ru:
         parent_id: Родительский элемент меню
       post:
         content: Содержимое
- 

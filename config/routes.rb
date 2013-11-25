@@ -1,6 +1,4 @@
 Tripclub::Application.routes.draw do
-  get "bookings/new"
-  get "bookings/create"
   mount Rich::Engine => '/rich', :as => 'rich'
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -15,6 +13,8 @@ Tripclub::Application.routes.draw do
     end
     resources :pages, only: [:show]
     resources :events, only: [:index, :show]
+    resources :travel_categories, only: [:show]
+    resources :travel_ideas, only: [:show]
 
     namespace :admin do
       resources :settings,    :only => [:update]

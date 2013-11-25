@@ -1,0 +1,19 @@
+#left-area
+  %p= @category.content.html_safe
+
+  .entry.post.clearfix
+    #et_pt_blog
+      - @category.travel_ideas.each do |idea|
+        .post.entry.clearfix
+          %h2.title
+            = link_to idea, travel_idea_path(idea)
+          %p.meta-info
+            = idea.created_at
+          .post-thumbnail
+            = link_to travel_idea_path(idea) do
+              %img{alt: idea.title, height: "184", src: idea.preview_img_url, width: "184"}/
+              %span.overlay
+
+          %p= idea.introtext
+          %a.read-more{href: travel_idea_path(idea) }
+            %span Читать далее

@@ -1,8 +1,9 @@
 class Web::ApplicationController < ApplicationController
   include RecentPostWidget
   include RecentHouseWidget
+  include RecentTravelIdeasWidget
 
-  helper_method :recent_posts, :recent_houses
+  helper_method :recent_posts, :recent_houses, :recent_travel_ideas
 
   protect_from_forgery with: :exception
 

@@ -1,0 +1,11 @@
+#sidebar
+  #recent-posts-4.widget.widget_recent_entries
+    %h3.title Категории
+    %ul
+      - @categories.each do |category|
+        %li= link_to category, travel_category_path(category)
+  #recent-posts-4.widget.widget_recent_entries
+    %h3.title Последние идеи
+    %ul
+      - recent_travel_ideas.each do |idea|
+        %li= link_to idea, travel_idea_path(idea)
