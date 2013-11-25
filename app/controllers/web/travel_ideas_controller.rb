@@ -1,4 +1,4 @@
-class Web::TravelIdeasController < ApplicationController
+class Web::TravelIdeasController < Web::ApplicationController
   def show
   end
 end

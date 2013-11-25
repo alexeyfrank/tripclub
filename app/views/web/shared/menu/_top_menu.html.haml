@@ -1,7 +1,18 @@
 %ul.nav#top-menu
-  - items.each do |item|
-    %li
-      = link_to item, item.url
-      - if item.has_children?
-        = render 'web/shared/menu/top_menu_inner', items: item.children
+  %li= link_to 'О нас', page_path(:about)
+  %li= link_to 'Контакты', page_path(:about)
+  %li 
+    = link_to 'Идеи для путешествий', '#'
+    %ul.sub-menu
+      - travel_categories.each do |category|
+        %li= link_to category, travel_category_path(category)
+
+  %li= link_to 'Аренда квартир', houses_path
+  %li= link_to 'Календарь событий', events_path
+  %li= link_to 'Блог', posts_path
+  -# - items.each do |item|
+  -#   %li
+  -#     = link_to item, item.url
+  -#     - if item.has_children?
+  -#       = render 'web/shared/menu/top_menu_inner', items: item.children
 

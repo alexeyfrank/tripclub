@@ -7,4 +7,8 @@ module ApplicationHelper
     menu = Menu.find_by(slug: options[:slug])
     render options[:tpl], items: menu.items.roots
   end
+
+  def travel_categories
+    TravelCategory.all
+  end
 end

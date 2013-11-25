@@ -1,2 +1,7 @@
-%h1 Web::TravelIdeas#show
-%p Find me in app/views/web/travel_ideas/show.html.haml
+.entry.post.clearfix
+  .post-thumbnail
+    %img.post-thumb{alt: @idea.title, height: "186", src: @idea.preview_img_url, width: "186"}/
+    %span.post-overlay
+  %p= @idea.content.html_safe
+
+

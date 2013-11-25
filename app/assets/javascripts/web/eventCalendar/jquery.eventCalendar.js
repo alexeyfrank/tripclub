@@ -66,31 +66,33 @@ Paradigma Tecnologico (@paradigmate)
     });
 
     // show event description
-    flags.wrap.find('.eventsCalendar-list').on('click','.eventTitle',function(e){
-      //flags.wrap.find('.eventsCalendar-list .eventTitle').live('click',function(e){
-      if(!eventsOpts.showDescription) {
-        e.preventDefault();
-        var desc = $(this).parent().find('.eventDesc');
+    if (flags.wrap.length) {
+      flags.wrap.find('.eventsCalendar-list').on('click','.eventTitle',function(e){
+        //flags.wrap.find('.eventsCalendar-list .eventTitle').live('click',function(e){
+        if(!eventsOpts.showDescription) {
+          e.preventDefault();
+          var desc = $(this).parent().find('.eventDesc');
 
-        if (!desc.find('a').size()) {
-          var eventUrl = $(this).attr('href');
-          var eventTarget = $(this).attr('target');
+          if (!desc.find('a').size()) {
+            var eventUrl = $(this).attr('href');
+            var eventTarget = $(this).attr('target');
 
-          // create a button to go to event url
-          desc.append('<a href="' + eventUrl + '" target="'+eventTarget+'" class="bt">'+eventsOpts.txt_GoToEventUrl+'</a>')
-        }
-
-        if (desc.is(':visible')) {
-          desc.slideUp();
-        } else {
-          if(eventsOpts.onlyOneDescription) {
-            flags.wrap.find('.eventDesc').slideUp();
+            // create a button to go to event url
+            desc.append('<a href="' + eventUrl + '" target="'+eventTarget+'" class="bt">'+eventsOpts.txt_GoToEventUrl+'</a>')
           }
-          desc.slideDown();
-        }
 
-      }
-    });
+          if (desc.is(':visible')) {
+            desc.slideUp();
+          } else {
+            if(eventsOpts.onlyOneDescription) {
+              flags.wrap.find('.eventDesc').slideUp();
+            }
+            desc.slideDown();
+          }
+
+        }
+      });
+    }
 
     function sortJson(a, b){
       return a.date.toLowerCase() > b.date.toLowerCase() ? 1 : -1;
