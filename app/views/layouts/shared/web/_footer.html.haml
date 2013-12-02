@@ -1,9 +1,11 @@
 #footer
   #footer-content.clearfix
     #footer-widgets.clearfix
-      #customlogowidget-3.footer-widget.widget_customlogowidget
-        %p#footer-logo
-        %p Cras euismod, sapien ut accumsan feugiat, mauris erat auctor metus, sed pellentesque massa tellus non enim. Aliquam commodo, risus sed posuere eleifend, odio nisi rhoncus nisl, vitae pharetra sem arcu non dui.
+      #recent-posts-3.footer-widget.widget_recent_entries
+        %h4.widgettitle Идеи для путешествий
+        %ul
+          - recent_travel_ideas.each do |idea|
+            %li= link_to idea, travel_idea_path(idea)
 
       #recent-posts-3.footer-widget.widget_recent_entries
         %h4.widgettitle Последние посты
@@ -17,6 +19,6 @@
           - recent_houses.each do |house|
             %li= link_to house, house_path(house)
 
-      #text-3.footer-widget.widget_text
-        %h4.widgettitle Text Widget
-        .textwidget Pellentesque sodales odio nec justo bibendum vitae porttitor metus luctus. Nulla volutpat, arcu in convallis imperdiet, arcu velit auctor purus, a rutrum nunc neque at elit. Cras euismod, sapien ut accumsan feugiat, mauris erat auctor metus, sed pellentesque massa tellus non enim.
+      #customlogowidget-3.footer-widget.widget_customlogowidget
+        %p#footer-logo
+        %p Небольшой текст с адресом и телефоном
