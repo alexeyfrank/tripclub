@@ -47,7 +47,7 @@ gem 'validates'
 gem 'state_machine'
 gem 'term-ansicolor'
 gem 'virtus'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 gem 'simple_form', github: "plataformatec/simple_form"
 gem 'authority'
 gem 'ransack'

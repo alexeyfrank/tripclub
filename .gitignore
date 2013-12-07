@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 /config/database.yml
+/config/puma/test_production.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -18,3 +19,4 @@
 /public/system
 /public/uploads
 /public/assets
+
