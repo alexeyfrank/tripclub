@@ -9,7 +9,9 @@ require 'capistrano/ext/multistage'
 # set :whenever_environment, defer { stage }
 # require "whenever/capistrano"
 
-set :repository, 'git@github.com:alexeyfrank/tripclub.git'
+set :rvm_type, :system
+
+set :repository, 'https://github.com/alexeyfrank/tripclub.git'
 
 set :deploy_to, '/u/apps/tripclub'
 # set :scm, :git
