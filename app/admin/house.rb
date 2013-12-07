@@ -1,4 +1,4 @@
-ActiveAdmin.register House do
+ActiveAdmin.register ::House do
   menu label: proc { I18n.t 'admin.menu.houses' }
   index do
     column :preview do |house|

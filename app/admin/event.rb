@@ -1,4 +1,4 @@
-ActiveAdmin.register Event do
+ActiveAdmin.register ::Event do
   menu label: proc { I18n.t 'admin.menu.events' }
   index do
     column :title

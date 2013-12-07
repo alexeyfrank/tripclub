@@ -1,4 +1,4 @@
-ActiveAdmin.register House::Booking, as: 'Booking' do
+ActiveAdmin.register ::House::Booking, as: 'Booking' do
   belongs_to :house
 
   index do

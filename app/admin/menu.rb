@@ -1,4 +1,4 @@
-ActiveAdmin.register Menu do
+ActiveAdmin.register ::Menu do
   menu label: proc { I18n.t('admin.menu.menus') }
 
   index do

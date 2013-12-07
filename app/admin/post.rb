@@ -1,4 +1,4 @@
-ActiveAdmin.register Post do
+ActiveAdmin.register ::Post do
   menu label: proc { I18n.t 'admin.menu.posts' }
   index do
     column :preview do |post|

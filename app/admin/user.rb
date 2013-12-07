@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register ::User do
   menu label: proc { I18n.t 'admin.menu.users' }
   index do
     column :email

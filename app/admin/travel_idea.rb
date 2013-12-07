@@ -1,4 +1,4 @@
-ActiveAdmin.register TravelIdea do
+ActiveAdmin.register ::TravelIdea do
   menu label: proc { I18n.t 'admin.menu.travel_ideas' }
   index do
     column :title
@@ -14,7 +14,7 @@ ActiveAdmin.register TravelIdea do
   form html: { multipart: true } do |f|
     f.inputs "Post Details" do
       f.input :title
-      f.input :travel_category_id, as: :select, collection: TravelCategory.all
+      f.input :travel_category_id, as: :select, collection: ::TravelCategory.all
       f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
     end
     f.actions

@@ -1,4 +1,4 @@
-ActiveAdmin.register Page do
+ActiveAdmin.register ::Page do
   menu label: proc { I18n.t 'admin.menu.pages' }
   index do
     column :title
@@ -14,7 +14,7 @@ ActiveAdmin.register Page do
     f.inputs "Page Details" do
       f.input :title
       f.input :content
-      f.input :parent_id, as: :select, collection: Page.all
+      f.input :parent_id, as: :select, collection: ::Page.all
     end
     f.actions
   end

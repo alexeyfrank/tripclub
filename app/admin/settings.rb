@@ -4,23 +4,23 @@ ActiveAdmin.register_page "Settings" do
     # from config/activaadmin_settings.yml file.
 
     all_settings  = {}
-    ActiveadminSettings::Setting.all.each do |s|
+    ::ActiveadminSettings::Setting.all.each do |s|
       all_settings[s.name] = s
     end
 
-    groups = ActiveadminSettings.groups
+    groups = ::ActiveadminSettings.groups
     groups.each do |g|
       g[:default_settings].each_key do |name|
         s = all_settings[name]
         unless s
-          s = ActiveadminSettings::Setting.initiate_setting(name)
+          s = ::ActiveadminSettings::Setting.initiate_setting(name)
         end
         g[:settings] << s 
       end
     end
 
     render  :partial  => "index",
-            :locals   => { :admins   => User.all,
+            :locals   => { :admins   => ::User.all,
                            :groups   => groups}
   end
 end

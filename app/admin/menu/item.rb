@@ -1,4 +1,4 @@
-ActiveAdmin.register Menu::Item, as: 'Item' do
+ActiveAdmin.register ::Menu::Item, as: 'Item' do
   belongs_to :menu
 
   index do
@@ -19,7 +19,7 @@ ActiveAdmin.register Menu::Item, as: 'Item' do
       f.input :title
       f.input :url
       f.input :position
-      f.input :parent_id, as: :select, collection: Menu.find(params[:menu_id]).items
+      f.input :parent_id, as: :select, collection: ::Menu.find(params[:menu_id]).items
 
     end
     f.actions
