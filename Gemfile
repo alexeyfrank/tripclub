@@ -2,7 +2,7 @@ ruby '1.9.3'
 
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.0'
+gem 'rails'
 gem 'pg'
 gem 'puma'
 gem 'draper'
