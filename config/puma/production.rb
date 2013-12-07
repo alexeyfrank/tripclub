@@ -5,6 +5,7 @@ directory app_path
 environment 'production'
 bind 'tcp://' + ENV['PUMA_HOST'] + ":" + ENV['PUMA_PORT'].to_s
 pidfile app_path + '/tmp/pids/puma.pid'
+rackup app_path + '/current/config.ru'
 # bind 'unix:///var/run/puma.sock'
 # bind 'unix:///var/run/puma.sock?umask=0777'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
