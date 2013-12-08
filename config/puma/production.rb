@@ -2,7 +2,7 @@
 
 app_path = '/u/apps/tripclub'
 bind_to = 'tcp://' + ENV['PUMA_HOST'] + ":" + ENV['PUMA_PORT'].to_s
-pid_file_path = app_path + '/tmp/pids/puma.pid'
+pid_file_path = app_path + '/current/tmp/pids/puma.pid'
 rackup_file_path = app_path + '/current/config.ru'
 
 puts bind_to

@@ -1,5 +1,7 @@
 ActiveAdmin.setup do |config|
 
+  config.load_paths = [File.join(Rails.root, "app", "ui_admin")]
+  config.allow_comments = false
   # == Site Title
   #
   # Set the title that is displayed on the main layout
