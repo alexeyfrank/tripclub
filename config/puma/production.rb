@@ -1,7 +1,7 @@
 #!/usr/bin/env puma
 
 app_path = '/u/apps/tripclub'
-bind_to = 'tcp://' + ENV['PUMA_HOST'] + ":" + ENV['PUMA_PORT'].to_s
+bind_to = 'tcp://' + (ENV['PUMA_HOST'] || '127.0.0.1') + ":" + (ENV['PUMA_PORT'] || 9292).to_s
 pid_file_path = app_path + '/current/tmp/pids/puma.pid'
 rackup_file_path = app_path + '/current/config.ru'
 
