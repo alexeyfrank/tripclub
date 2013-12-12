@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
   # include Concerns::AuthManagment
   # include Concerns::AclManagment
   include Concerns::LocaleManagment

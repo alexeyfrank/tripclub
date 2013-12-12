@@ -64,6 +64,7 @@ gem 'annotate'
 gem 'rich', :git => 'git://github.com/bastiaanterhorst/rich.git'
 gem "activeadmin-settings", github: 'alexeyfrank/activeadmin-settings'
 gem 'jbuilder'
+gem 'liquid'
 # gem 'capybara-console'
 
 group :test do

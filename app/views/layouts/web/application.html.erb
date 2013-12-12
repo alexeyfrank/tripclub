@@ -17,17 +17,7 @@
 <body class="home blog chrome et_includes_sidebar">
   <div id="container">
     <%= render 'layouts/shared/web/header' %>
-    <%= render 'layouts/shared/web/slider' %>
-    <%= render 'layouts/shared/web/category_header' %>
-
-    <div id="content-area">
-      <%= render 'layouts/shared/web/services' %>
-      <%= render 'layouts/shared/web/from_blog' %>
-      <%= render 'layouts/shared/web/multimedia_bar' %>
-
-      <div class="clear"></div>
-
-    </div> <!-- end #content-area -->
+    <%= yield %>
 
     <%= render 'layouts/shared/web/footer' %>
   </div> <!-- end #container -->

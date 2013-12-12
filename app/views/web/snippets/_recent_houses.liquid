@@ -1,0 +1,8 @@
+<div id="#recent-posts-4" class="widget widget_recent_entries">
+  <h3 class="title">Последние квартиры</h3>
+  <ul>
+    {% for house in recent_houses %}
+      <li> {{ link_to house, house_path(house) }}</li>
+    {% endfor %}
+  </ul>
+</div>

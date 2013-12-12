@@ -1,7 +1,7 @@
 class Web::ApplicationController < ApplicationController
-  include RecentPostWidget
-  include RecentHouseWidget
-  include RecentTravelIdeasWidget
+  # include RecentPostWidget
+  # include RecentHouseWidget
+  # include RecentTravelIdeasWidget
 
   helper_method :recent_posts, :recent_houses, :recent_travel_ideas
 

@@ -1,11 +1,13 @@
 ru:
   attributes:
+    image: Изображение
     title: Название
     state_event: Изменить состояние
     state: Состояние
     created_at: Время создания
     published_at: Опубликовано
     user: Пользователь
+    slide: Слайд
 
   activerecord:
     models:
@@ -15,6 +17,7 @@ ru:
       menu: Меню
       item: элемент меню
       menu/item: элемент меню
+      slide: Слайд
 
     attributes:
       user:

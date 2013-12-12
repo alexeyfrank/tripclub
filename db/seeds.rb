@@ -11,37 +11,33 @@
 
 # Top Menu create
 
-top_menu = Menu.where(slug: 'top_menu').first_or_initialize
-if top_menu.new_record?
-  top_menu.title = 'Верхнее меню'
-
-  top_menu.save!
-end
-
-top_menu.items.create! title: 'О нас', url: '/pages/about', position: 20
-top_menu.items.create! title: 'Контакты', url: '/pages/contacts', position: 50
-top_menu.items.create! title: 'Идеи для путешествий', url: '/ideas', position: 100
-top_menu.items.create! title: 'Аренда квартир', url: '/houses', position: 300
-top_menu.items.create! title: 'Календарь событий', url: '/events', position: 400
-top_menu.items.create! title: 'Блог', url: '/blog', position: 500
+# top_menu = Menu.where(slug: 'top_menu').first_or_initialize
+# if top_menu.new_record?
+#   top_menu.title = 'Верхнее меню'
+# 
+#   top_menu.save!
+# end
+# 
+# top_menu.items.create! title: 'О нас', url: '/pages/about', position: 20
+# top_menu.items.create! title: 'Контакты', url: '/pages/contacts', position: 50
+# top_menu.items.create! title: 'Идеи для путешествий', url: '/ideas', position: 100
+# top_menu.items.create! title: 'Аренда квартир', url: '/houses', position: 300
+# top_menu.items.create! title: 'Календарь событий', url: '/events', position: 400
+# top_menu.items.create! title: 'Блог', url: '/blog', position: 500
 
 # Base pages create
 
 pages = [
-  { 
-    title: 'О нас',
-    slug: 'about'
-  },
-  { 
-    title: 'Контакты',
-    slug: 'contacts'
-  }
+  { title: 'О нас', slug: 'about' },
+  { title: 'Контакты', slug: 'contacts' },
+  { title: 'Главная', slug: 'main' }
 ]
 
 pages.each do |page|
   db_page = Page.where(slug: page[ :slug ]).first_or_initialize
-  if db_page.new_record?
+  # if db_page.new_record?
     db_page.title = page[ :title ]
+    db_page.content = File.read Rails.root.join('db', 'pages', "#{page[:slug]}.html")
     db_page.save
-  end
+  # end
 end

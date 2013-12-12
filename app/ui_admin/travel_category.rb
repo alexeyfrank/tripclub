@@ -1,5 +1,5 @@
 ActiveAdmin.register ::TravelCategory do
-  menu label: proc { I18n.t 'admin.menu.travel_categories' }
+  menu label: proc { I18n.t 'admin.menu.travel_categories' }, parent: 'TravelIdea'
   index do
     column :title
     column :created_at

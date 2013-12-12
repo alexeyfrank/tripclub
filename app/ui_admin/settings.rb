@@ -1,5 +1,6 @@
 ActiveAdmin.register_page "Settings" do
-  content do    
+  menu label: proc { I18n.t 'admin.menu.settings' }
+  content do
     # Mergin db settings objects and default values
     # from config/activaadmin_settings.yml file.
 
