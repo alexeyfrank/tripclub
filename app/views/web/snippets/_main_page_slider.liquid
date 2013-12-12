@@ -2,30 +2,10 @@
   <div class="flexslider" id="featured">
     <ul class="slides">
       {% for slide in slides %}
-      <li class="slide flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
-        <img alt="{{slide.title}}" height="332" src="{{ slide.image_url }}" width="960">
-        {% comment %}
-        <div class="featured-top-shadow"></div>
-        <div class="featured-bottom-shadow"></div>
-        <div class="featured-description">
-          <h2 class="featured-title">
-            <a href="http://www.elegantthemes.com/preview/Chameleon/2010/09/15/purple-haze/">Purple Haze</a>
-          </h2>
-          <p>Nullam at massa orci. Nulla suscipit adipiscing tincidunt. Donec purus arcu, posuere et pellentesque vitae, mattis in dui. Ut quis mi in erat blandit porta a sed risus. Maecenas nibh nisl, blandit in vestibulum non, pharetra id erat. Aenean vulputate elementum velit. Sed sed...</p>
-          <a class="readmore" href="http://www.elegantthemes.com/preview/Chameleon/2010/09/15/purple-haze/">Read More</a>
-        </div>
-        {% endcomment %}
-      </li>
+        <li class="slide flex-active-slide">
+          <img alt="{{slide.title}}" height="332" src="{{ slide.image_url }}" width="960" />
+        </li>
       <{% endfor %}
-    </ul>
-    <ol class="flex-control-nav flex-control-paging">
-      {% for slide in slides %}
-        <li><a class="flex-active">{{ forloop.index }}</a></li>
-      {% endfor %}
-    </ol>
-    <ul class="flex-direction-nav">
-      <li><a class="flex-prev" href="#">Пред.</a></li>
-      <li><a class="flex-next" href="#">След.</a></li>
     </ul>
   </div>
 </div>
