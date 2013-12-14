@@ -1,5 +1,7 @@
 ru:
   admin:
+    house:
+      house_bookings: Заявки на бронирование
     menu:
       menus: Меню
       items: Элементы меню

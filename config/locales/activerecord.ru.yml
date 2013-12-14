@@ -1,6 +1,8 @@
 ru:
   attributes:
     image: Изображение
+    address: Адрес
+    description: Описание
     title: Название
     state_event: Изменить состояние
     state: Состояние
@@ -15,6 +17,7 @@ ru:
       page: Страница
       post: Пост
       menu: Меню
+      house: Квартира
       item: элемент меню
       menu/item: элемент меню
       slide: Слайд

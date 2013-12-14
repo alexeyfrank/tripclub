@@ -1,4 +1,5 @@
-window.ActiveAdmin.Popover = class ActiveAdmin.Popover
+# window.ActiveAdmin ||= {}
+window.Popover = class Popover
   constructor: (@options, @element) ->
     @$element = $(@element)
 
@@ -118,5 +119,5 @@ window.ActiveAdmin.Popover = class ActiveAdmin.Popover
     $nipple.css "left", nippleLeftPos
 
 (($) ->
-  $.widget.bridge 'popover', ActiveAdmin.Popover
+  $.widget.bridge 'popover', Popover
 )(jQuery)
