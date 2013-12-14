@@ -18,8 +18,8 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Houses" do
           ul do
-            House.last(5).map do |post|
-              li link_to(house.title, admin_house_path(house))
+            House.last(5).map do |house|
+              li link_to(house.address, admin_house_path(house))
             end
           end
         end

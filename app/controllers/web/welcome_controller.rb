@@ -8,7 +8,7 @@ class Web::WelcomeController < Web::ApplicationController
   def main_page_helpers
     {
       'recent_posts'  => recent_posts.map   { |p| { 'id' => p.id, 'title' => p.title } },
-      'recent_houses' => recent_houses.map  { |p| { 'id' => p.id, 'title' => p.title } },
+      'recent_houses' => recent_houses.map  { |p| { 'id' => p.id, 'address' => p.address } },
       'slides'        => slides.map         { |s| { 'image_url' => s.image_url } }
     }
   end
