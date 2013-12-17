@@ -1,2 +1,21 @@
-%h1 Web::Houses#show
-%p Find me in app/views/web/houses/show.html.haml
+%h1= @house.address
+
+.house-content
+  = @house.description.html_safe
+
+- if @house.images.any?
+  #multi-media-bar
+    #et-multi-media.clearfix
+      %a#left-multi-media{href: "#"} Prev
+      %a#right-multi-media{href: "#", next: ""}
+      #media-slides
+        .media-slide
+          - @house.images.each do |img|
+            .thumb
+              %a.fancybox{href: img.file_url, rel: "media", title: img.title }
+                %img.multi-media-image{alt: img.title, height: "48", src: img.file.thumb.url, width: "48"}/
+                %span.more
+              .media-description
+                %p= img.title
+                %span.media-arrow
+

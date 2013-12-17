@@ -19,3 +19,4 @@
 //= require ./eventCalendar/jquery.timeago
 //= require ./events
 //= require ./houses
+//= require ./fancybox

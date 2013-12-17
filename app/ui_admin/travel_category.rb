@@ -10,7 +10,7 @@ ActiveAdmin.register ::TravelCategory do
   filter :created_at
 
   form html: { multipart: true } do |f|
-    f.inputs "Post Details" do
+    f.inputs "TravelCategory Details" do
       f.input :title
       f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
     end
