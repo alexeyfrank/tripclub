@@ -15,7 +15,7 @@ ActiveAdmin.register ::Page do
     f.inputs "Page Details" do
       f.input :title
       f.input :slug
-      f.input :content
+      f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
       f.input :parent_id, as: :select, collection: ::Page.all
     end
     f.actions
