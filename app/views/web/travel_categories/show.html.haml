@@ -11,7 +11,7 @@
             = idea.created_at
           .post-thumbnail
             = link_to travel_idea_path(idea) do
-              %img{alt: idea.title, height: "184", src: idea.preview_img_url, width: "184"}/
+              %img{alt: idea.title, height: "184", src: idea.preview_img.try(:url), width: "184"}/
               %span.overlay
 
           %p= idea.introtext

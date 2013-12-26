@@ -14,14 +14,16 @@ ActiveAdmin.register ::TravelIdea do
   form html: { multipart: true } do |f|
     f.inputs "Post Details" do
       f.input :title
+      f.input :preview_img
       f.input :travel_category_id, as: :select, collection: ::TravelCategory.all
+      f.input :introtext
       f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
     end
     f.actions
   end
   controller do
     def permitted_params
-      params.permit travel_idea: [:title, :content, :travel_category_id]
+      params.permit travel_idea: [:title, :content, :travel_category_id, :preview_img, :introtext]
     end
   end
 

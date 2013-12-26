@@ -10,6 +10,9 @@ ru:
     published_at: Опубликовано
     user: Пользователь
     slide: Слайд
+    introtext: Вступление
+    preview_img: Превью
+    content: Содержимое
 
   activerecord:
     models:
@@ -35,7 +38,6 @@ ru:
         to: По
         content: Примечание
       page:
-        content: Содержимое
         parent: Родительская страница
         parent_id: Родительская страница
       menu/item:
@@ -45,3 +47,5 @@ ru:
         parent_id: Родительский элемент меню
       post:
         content: Содержимое
+      travel_idea:
+        travel_category_id: Категория
