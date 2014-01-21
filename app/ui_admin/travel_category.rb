@@ -14,11 +14,17 @@ ActiveAdmin.register ::TravelCategory do
       f.input :title
       f.input :content, :as => :rich, :config => { :width => '76%', 'margin-left' => '24%', :height => '400px' }
     end
+    f.inputs "Images" do
+      f.has_many :images, allow_destroy: true, new_record: true do |cf|
+        cf.input :title
+        cf.input :file
+      end
+    end
     f.actions
   end
   controller do
     def permitted_params
-      params.permit travel_category: [:title, :content]
+      params.permit travel_category: [:title, :content, :images_attributes => [:title, :file, "_destroy", :id]]
     end
   end
 

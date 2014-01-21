@@ -15,6 +15,10 @@
 class TravelIdea < ActiveRecord::Base
   belongs_to :travel_category
 
+  has_many :images, dependent: :destroy
+
+  accepts_nested_attributes_for :images, allow_destroy: true
+
   mount_uploader :preview_img, TravelIdeaPreviewImgUploader
 
   def to_s

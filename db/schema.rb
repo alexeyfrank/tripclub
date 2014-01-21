@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226190509) do
+ActiveRecord::Schema.define(version: 20140121183400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,9 +137,25 @@ ActiveRecord::Schema.define(version: 20131226190509) do
     t.datetime "updated_at"
   end
 
+  create_table "travel_category_images", force: true do |t|
+    t.string   "title"
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "travel_category_id"
+  end
+
+  create_table "travel_idea_images", force: true do |t|
+    t.string   "title"
+    t.string   "file"
+    t.integer  "travel_idea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "travel_ideas", force: true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content"
     t.integer  "travel_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
