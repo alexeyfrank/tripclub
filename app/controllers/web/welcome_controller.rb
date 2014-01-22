@@ -2,6 +2,7 @@ class Web::WelcomeController < Web::ApplicationController
 
   def index
     @page = Page.find_by! slug: :main
+    @slides = slides
     @content = liquid @page.content, main_page_helpers
   end
 

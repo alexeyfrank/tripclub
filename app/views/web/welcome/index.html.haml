@@ -1,1 +1,8 @@
+.flex-container
+  #featured.flexslider
+    %ul.slides
+      - @slides.each do |slide|
+        %li.slide.flex-active-slide
+          %img{alt: "", height: "332", src: slide.image_url, width: "960"}/
+
 = @content
